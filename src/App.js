@@ -1,10 +1,29 @@
+import React, {useState} from 'react';
 import './App.css';
+import { questions } from './questions';
+import mobile from './images/illustration-woman-online-mobile.svg'
+import desktop from './images/illustration-woman-online-desktop.svg'
+import SingleQuestion from './components/SingleQuestion';
 
 function App() {
+  const [quests] = useState(questions)
   return (
-    <div className="App">
-      <h1>hello world</h1>
+    <div className="container">
+      <div>
+        <picture>
+          <source media="(min-width: 768px)" srcSet={desktop} />
+          <img src={mobile} alt="women mobile" />
+        </picture>
+      </div>
+
+      <div className='question-card'>
+        <h1>FAQ</h1>
+        {quests.map((quest) => (
+          <SingleQuestion key={quest.id} question={quest.question} answer={ quest.answer}/>
+        ))}
+      </div>
     </div>
+
   );
 }
 
@@ -15,25 +34,6 @@ export default App;
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-</head>
-<body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
