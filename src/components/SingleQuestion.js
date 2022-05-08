@@ -1,5 +1,7 @@
 import React from 'react';
-import downIcon from '../images/icon-arrow-down.svg'
+import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
+
 const SingleQuestion = ({ question, answer }) => {
     return (
       <div className='single-question-card'>
@@ -7,9 +9,10 @@ const SingleQuestion = ({ question, answer }) => {
           <h3>{question}</h3>
           <p>{answer}</p>
         </div>
-        <div className='icon'>
-            <img src={downIcon} alt='' />
-        </div>
+        <IconContext.Provider value={{ className: 'top-react-icons' }}>
+          <AiOutlineDown />
+          <AiOutlineUp />
+        </IconContext.Provider>
       </div>
     );
    

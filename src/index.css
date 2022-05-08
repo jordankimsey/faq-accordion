@@ -56,7 +56,12 @@ body {
   justify-content: center;
   align-items: start;
 }
+/* 
+.single-question {
+  display: flex;
+} */
 
-.icon {
-  padding-top: 15px;
+.top-react-icons {
+  
+  font-size: 2rem;
 }

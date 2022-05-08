@@ -11,7 +11,7 @@ function App() {
     <div className="container">
       <div>
         <picture>
-          <source media="(min-width: 768px)" srcSet={desktop} />
+          <source media="(min-width: 768px)" srcset={desktop} />
           <img src={mobile} alt="women mobile" />
         </picture>
       </div>
