@@ -9,13 +9,12 @@ function App() {
   const [quests] = useState(questions)
   return (
     <div className="container">
-      <div>
-        <picture>
+      <div className='hero-container'>
+        <picture className='hero-image'>
           <source media="(min-width: 768px)" srcset={desktop} />
           <img src={mobile} alt="women mobile" />
         </picture>
       </div>
-
       <div className='question-card'>
         <h1>FAQ</h1>
         {quests.map((quest) => (
