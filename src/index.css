@@ -53,15 +53,21 @@ body {
 .single-question-card {
   border-bottom: 1px solid var(--light-grayish-blue);
   display: flex;
-  justify-content: center;
-  align-items: start;
+  flex-direction: row;
+  justify-content: space-between;
 }
-/* 
-.single-question {
+
+.question {
   display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  margin-top: 15px;
+}
+
+/* .chevron {
+  margin-left: 50px;
 } */
 
-.top-react-icons {
-  
-  font-size: 2rem;
-}
+

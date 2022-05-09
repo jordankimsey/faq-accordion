@@ -1,21 +1,23 @@
-import React from 'react';
-import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
-import { IconContext } from 'react-icons';
+import React, {useState} from 'react';
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
+
 
 const SingleQuestion = ({ question, answer }) => {
+
+    const [show, setShow] = useState(false);
+ 
     return (
-      <div className='single-question-card'>
-        <div className='single-question'>
+      <div onClick={() => setShow(!show)} className='single-question-card'>
+        <div className='question'>
           <h3>{question}</h3>
-          <p>{answer}</p>
+          {show && <p>{answer}</p>}
         </div>
-        <IconContext.Provider value={{ className: 'top-react-icons' }}>
-          <AiOutlineDown />
-          <AiOutlineUp />
-        </IconContext.Provider>
+        <div className='arrow'>
+          {show ? <FaChevronUp /> : <FaChevronDown className='chevron' />}
+          {/* <FaChevronUp /> */}
+        </div>
       </div>
     );
-   
 };
 
 export default SingleQuestion;
