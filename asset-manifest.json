@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jordankimsey/faq-accordion/static/css/main.7d422e90.css",
+    "main.js": "/jordankimsey/faq-accordion/static/js/main.a8a9ac62.js",
+    "static/media/illustration-woman-online-mobile.svg": "/jordankimsey/faq-accordion/static/media/illustration-woman-online-mobile.fe928f9c476ef6d332672b3ab38268fd.svg",
+    "static/media/illustration-woman-online-desktop.svg": "/jordankimsey/faq-accordion/static/media/illustration-woman-online-desktop.843eb114c7213a596ee246bf87f27008.svg",
+    "index.html": "/jordankimsey/faq-accordion/index.html",
+    "main.7d422e90.css.map": "/jordankimsey/faq-accordion/static/css/main.7d422e90.css.map",
+    "main.a8a9ac62.js.map": "/jordankimsey/faq-accordion/static/js/main.a8a9ac62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d422e90.css",
+    "static/js/main.a8a9ac62.js"
+  ]
+}
